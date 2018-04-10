@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCi-nW-ekq">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="542.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="482.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Train Shedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiG-8L-XAb" userLabel="Train Shedule">
                                                 <rect key="frame" x="40" y="30" width="294.5" height="20.5"/>
@@ -95,20 +95,20 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="done"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFw-su-Ush" userLabel="Departure Date ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFw-su-Ush" userLabel="DateFromDatePickerLabel">
                                                 <rect key="frame" x="40" y="185" width="294" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-8Z-WqU">
-                                                <rect key="frame" x="40" y="205.5" width="295" height="337"/>
+                                                <rect key="frame" x="40" y="206" width="295" height="276.5"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="544997068.06514204">
                                                     <!--2018-04-09 20:04:28 +0000-->
                                                 </date>
                                             </datePicker>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="F5S-3G-2FP" firstAttribute="leading" secondItem="tCi-nW-ekq" secondAttribute="leading" constant="40" id="000-JK-OWt"/>
                                             <constraint firstItem="leD-vC-RFt" firstAttribute="leading" secondItem="tCi-nW-ekq" secondAttribute="leading" constant="40" id="2O4-N3-Tbf"/>
@@ -129,17 +129,20 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJp-4A-vDP">
-                                        <rect key="frame" x="0.0" y="542.5" width="375" height="60.5"/>
+                                        <rect key="frame" x="0.0" y="482.5" width="375" height="120.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7w-8e-bOK">
-                                                <rect key="frame" x="40" y="15.5" width="295" height="30"/>
+                                                <rect key="frame" x="40" y="45" width="295" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Search Train">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="7X4-hT-9bs" kind="show" id="Aq1-eB-eml"/>
+                                                </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="b7w-8e-bOK" firstAttribute="centerX" secondItem="PJp-4A-vDP" secondAttribute="centerX" id="AhO-u6-iQn"/>
                                             <constraint firstItem="b7w-8e-bOK" firstAttribute="centerY" secondItem="PJp-4A-vDP" secondAttribute="centerY" id="Jr3-kf-bOx"/>
@@ -148,7 +151,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="PJp-4A-vDP" firstAttribute="height" secondItem="wJ5-HX-7yr" secondAttribute="height" multiplier="0.1" id="nfE-MV-cMe"/>
+                                    <constraint firstItem="PJp-4A-vDP" firstAttribute="height" secondItem="wJ5-HX-7yr" secondAttribute="height" multiplier="0.2" id="nfE-MV-cMe"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -161,10 +164,75 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xhq-P5-Jrg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="DcO-mY-O8L">
+                        <barButtonItem key="backBarButtonItem" title=" " id="oja-yH-UaY"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="DepartureStation" destination="F5S-3G-2FP" id="Fpe-Hv-MZd"/>
+                        <outlet property="DestinationStation" destination="leD-vC-RFt" id="IgC-rw-c7o"/>
+                        <outlet property="dateFromDatePickerLabel" destination="hFw-su-Ush" id="tjm-sW-5G7"/>
+                        <outlet property="datePickerForTrainTimetable" destination="tZM-8Z-WqU" id="zqf-AM-npD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yC3-VD-S23" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1891.875" y="-565"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="6hL-0U-2Lg">
+            <objects>
+                <tableViewController id="7X4-hT-9bs" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WWA-ew-c4V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="rvr-3t-kUu">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minsk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osc-t4-LE0" userLabel="Departure Station Label">
+                                    <rect key="frame" x="71" y="29" width="100" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moskow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSo-lt-BJY" userLabel="Destination Station Label">
+                                    <rect key="frame" x="71" y="86" width="100" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20 April 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2c-F7-YxA">
+                                    <rect key="frame" x="241" y="86" width="103" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ZTq-Kd-qSd">
+                                <rect key="frame" x="0.0" y="172" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZTq-Kd-qSd" id="GIX-XG-Qt5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7X4-hT-9bs" id="y3c-0z-Uvl"/>
+                            <outlet property="delegate" destination="7X4-hT-9bs" id="Gb9-jg-feB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PG9-pz-rXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2920.8000000000002" y="-565.36731634182911"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IEa-KE-mvs">

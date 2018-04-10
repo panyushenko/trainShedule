@@ -10,14 +10,43 @@ import UIKit
 
 class TrainSearchController: UIViewController {
 
+    @IBOutlet weak var datePickerForTrainTimetable: UIDatePicker!
+    @IBOutlet weak var dateFromDatePickerLabel: UILabel!
+    @IBOutlet weak var DepartureStation: UITextField!
+    @IBOutlet weak var DestinationStation: UITextField!
+    
+    lazy var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = .long
+        return dateFormatter
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureDatePicker()
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func configureDatePicker() {
+        datePickerForTrainTimetable.datePickerMode = .date
+        
+        let now = Date()
+        datePickerForTrainTimetable.minimumDate = now
+
+        datePickerForTrainTimetable.addTarget(self, action: #selector(TrainSearchController.updateDatePickerLabel), for: .valueChanged)
+        
+        updateDatePickerLabel()
+    }
+    
+    @objc
+    func updateDatePickerLabel() {
+        dateFromDatePickerLabel.text = dateFormatter.string(from: datePickerForTrainTimetable.date)
     }
 }
