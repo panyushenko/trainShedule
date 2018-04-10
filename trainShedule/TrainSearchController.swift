@@ -12,8 +12,9 @@ class TrainSearchController: UIViewController {
 
     @IBOutlet weak var datePickerForTrainTimetable: UIDatePicker!
     @IBOutlet weak var dateFromDatePickerLabel: UILabel!
-    @IBOutlet weak var DepartureStation: UITextField!
-    @IBOutlet weak var DestinationStation: UITextField!
+    
+    @IBOutlet weak var departureStation: UITextField!
+    @IBOutlet weak var destinationStation: UITextField!
     
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -26,6 +27,9 @@ class TrainSearchController: UIViewController {
         super.viewDidLoad()
 
         configureDatePicker()
+        
+        departureStation.delegate = self
+        destinationStation.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -48,5 +52,13 @@ class TrainSearchController: UIViewController {
     @objc
     func updateDatePickerLabel() {
         dateFromDatePickerLabel.text = dateFormatter.string(from: datePickerForTrainTimetable.date)
+    }
+}
+
+extension TrainSearchController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        departureStation.resignFirstResponder()
+        destinationStation.resignFirstResponder()
+        return false
     }
 }

@@ -168,10 +168,10 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="oja-yH-UaY"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="DepartureStation" destination="F5S-3G-2FP" id="Fpe-Hv-MZd"/>
-                        <outlet property="DestinationStation" destination="leD-vC-RFt" id="IgC-rw-c7o"/>
                         <outlet property="dateFromDatePickerLabel" destination="hFw-su-Ush" id="tjm-sW-5G7"/>
                         <outlet property="datePickerForTrainTimetable" destination="tZM-8Z-WqU" id="zqf-AM-npD"/>
+                        <outlet property="departureStation" destination="F5S-3G-2FP" id="szr-hi-2Dk"/>
+                        <outlet property="destinationStation" destination="leD-vC-RFt" id="Dfm-gc-lr9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yC3-VD-S23" userLabel="First Responder" sceneMemberID="firstResponder"/>
