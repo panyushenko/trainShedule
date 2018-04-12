@@ -18,14 +18,13 @@ class TrainSearchController: UIViewController {
     
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
-        
         dateFormatter.dateStyle = .long
         return dateFormatter
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureDatePicker()
         
         departureStation.delegate = self
@@ -40,18 +39,17 @@ class TrainSearchController: UIViewController {
     
     func configureDatePicker() {
         datePickerForTrainTimetable.datePickerMode = .date
-        
         let now = Date()
         datePickerForTrainTimetable.minimumDate = now
-
         datePickerForTrainTimetable.addTarget(self, action: #selector(TrainSearchController.updateDatePickerLabel), for: .valueChanged)
-        
         updateDatePickerLabel()
     }
     
     @objc
     func updateDatePickerLabel() {
         dateFromDatePickerLabel.text = dateFormatter.string(from: datePickerForTrainTimetable.date)
+        //let onlyDate = "\(datePickerForTrainTimetable.date)".components(separatedBy: " ")[0]
+        //print(onlyDate)
     }
 }
 

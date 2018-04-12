@@ -13,6 +13,8 @@
 		D04AA4ED207B8C8A002D6399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D04AA4EC207B8C8A002D6399 /* Assets.xcassets */; };
 		D04AA4F0207B8C8A002D6399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04AA4EE207B8C8A002D6399 /* LaunchScreen.storyboard */; };
 		D04AA4FE207B9F62002D6399 /* TrainSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04AA4FD207B9F62002D6399 /* TrainSearchController.swift */; };
+		D0688726207E9F5F00092F3B /* TrainSheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0688725207E9F5F00092F3B /* TrainSheduleViewController.swift */; };
+		D0688728207E9F9000092F3B /* TrainSheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0688727207E9F9000092F3B /* TrainSheduleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D04AA4EF207B8C8A002D6399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D04AA4F1207B8C8A002D6399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D04AA4FD207B9F62002D6399 /* TrainSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSearchController.swift; sourceTree = "<group>"; };
+		D0688725207E9F5F00092F3B /* TrainSheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSheduleViewController.swift; sourceTree = "<group>"; };
+		D0688727207E9F9000092F3B /* TrainSheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSheduleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				D04AA4E5207B8C89002D6399 /* AppDelegate.swift */,
 				D04AA4E7207B8C89002D6399 /* ViewController.swift */,
 				D04AA4FD207B9F62002D6399 /* TrainSearchController.swift */,
+				D0688725207E9F5F00092F3B /* TrainSheduleViewController.swift */,
+				D0688727207E9F9000092F3B /* TrainSheduleTableViewCell.swift */,
 				D04AA4E9207B8C89002D6399 /* Main.storyboard */,
 				D04AA4EC207B8C8A002D6399 /* Assets.xcassets */,
 				D04AA4EE207B8C8A002D6399 /* LaunchScreen.storyboard */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0688726207E9F5F00092F3B /* TrainSheduleViewController.swift in Sources */,
 				D04AA4E8207B8C89002D6399 /* ViewController.swift in Sources */,
+				D0688728207E9F9000092F3B /* TrainSheduleTableViewCell.swift in Sources */,
 				D04AA4FE207B9F62002D6399 /* TrainSearchController.swift in Sources */,
 				D04AA4E6207B8C89002D6399 /* AppDelegate.swift in Sources */,
 			);
