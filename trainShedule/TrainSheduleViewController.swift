@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TrainSheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TrainSheduleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,10 @@ class TrainSheduleViewController: UIViewController, UITableViewDelegate, UITable
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
+
+extension TrainSheduleViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

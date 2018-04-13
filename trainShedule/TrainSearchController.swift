@@ -19,6 +19,7 @@ class TrainSearchController: UIViewController {
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
+        //dateFormatter.locale = Locale(identifier: "Ru")
         return dateFormatter
     }()
     
@@ -41,6 +42,7 @@ class TrainSearchController: UIViewController {
         datePickerForTrainTimetable.datePickerMode = .date
         let now = Date()
         datePickerForTrainTimetable.minimumDate = now
+        //datePickerForTrainTimetable.locale = Locale(identifier: "Ru")
         datePickerForTrainTimetable.addTarget(self, action: #selector(TrainSearchController.updateDatePickerLabel), for: .valueChanged)
         updateDatePickerLabel()
     }
@@ -48,10 +50,12 @@ class TrainSearchController: UIViewController {
     @objc
     func updateDatePickerLabel() {
         dateFromDatePickerLabel.text = dateFormatter.string(from: datePickerForTrainTimetable.date)
-        //let onlyDate = "\(datePickerForTrainTimetable.date)".components(separatedBy: " ")[0]
-        //print(onlyDate)
+//        let onlyDate = "\(datePickerForTrainTimetable.date)".components(separatedBy: " ")[0]
+//        print(onlyDate)
     }
 }
+
+
 
 extension TrainSearchController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
