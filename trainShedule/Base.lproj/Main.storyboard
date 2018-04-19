@@ -230,18 +230,18 @@
                                         <rect key="frame" x="20" y="24" width="43" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20 April 2018" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8i-NG-Ijy">
-                                        <rect key="frame" x="223" y="16" width="136" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="23"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Москва" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lO-ZV-dWK">
                                         <rect key="frame" x="71" y="60" width="159" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20 April 2018" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8i-NG-Ijy">
+                                        <rect key="frame" x="177" y="0.0" width="190" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -320,6 +320,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="departureStationNameFrom" destination="w03-YI-W8a" id="Nx4-tB-tF1"/>
+                                            <outlet property="departureTimeFromStation" destination="cOx-M8-6LV" id="Izb-dM-8Ft"/>
+                                            <outlet property="minPriceOfTheTrainTicket" destination="g0I-Hz-egl" id="ROm-nX-zx4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -341,6 +346,11 @@
                         <viewLayoutGuide key="safeArea" id="O7I-Ge-kbd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Список билетов" id="Ek6-dr-sJ4"/>
+                    <connections>
+                        <outlet property="dateOfTheTrainSearchOnTrainViewSheduleViewController" destination="N8i-NG-Ijy" id="psQ-aW-Ec7"/>
+                        <outlet property="departureStationOnTrainSheduleViewController" destination="3CG-ot-wu7" id="mEV-2A-DYP"/>
+                        <outlet property="destinationStationOnTrainSheduleViewController" destination="3lO-ZV-dWK" id="HA5-P7-mSG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAb-Fc-iaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

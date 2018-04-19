@@ -10,6 +10,11 @@ import UIKit
 
 class TrainSheduleTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var departureTimeFromStation: UILabel!
+    @IBOutlet weak var departureStationNameFrom: UILabel!
+    @IBOutlet weak var minPriceOfTheTrainTicket: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

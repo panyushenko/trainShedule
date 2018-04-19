@@ -9,10 +9,21 @@
 import UIKit
 
 class TrainSheduleViewController: UIViewController {
-
+    @IBOutlet weak var departureStationOnTrainSheduleViewController: UILabel!
+    @IBOutlet weak var destinationStationOnTrainSheduleViewController: UILabel!
+    @IBOutlet weak var dateOfTheTrainSearchOnTrainViewSheduleViewController: UILabel!
+    
+    var departureStationNameOnTrainSheduleViewController: String?
+    var destinationStationNameOnTrainSheduleViewController: String?
+    var dateNameOnTrainSheduleViewController: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        departureStationOnTrainSheduleViewController.text = departureStationNameOnTrainSheduleViewController
+        destinationStationOnTrainSheduleViewController.text = destinationStationNameOnTrainSheduleViewController
+        dateOfTheTrainSearchOnTrainViewSheduleViewController.text = dateNameOnTrainSheduleViewController
+        
         // Do any additional setup after loading the view.
     }
 

@@ -19,7 +19,7 @@ class TrainSearchController: UIViewController {
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
-        //dateFormatter.locale = Locale(identifier: "Ru")
+        dateFormatter.locale = Locale(identifier: "Ru")
         return dateFormatter
     }()
     
@@ -53,9 +53,17 @@ class TrainSearchController: UIViewController {
 //        let onlyDate = "\(datePickerForTrainTimetable.date)".components(separatedBy: " ")[0]
 //        print(onlyDate)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier! == "SearchTrain" {
+            guard let trainSheduleVC = segue.destination as? TrainSheduleViewController else {return}
+            trainSheduleVC.departureStationNameOnTrainSheduleViewController = departureStation.text
+            trainSheduleVC.destinationStationNameOnTrainSheduleViewController = destinationStation.text
+            trainSheduleVC.dateNameOnTrainSheduleViewController = dateFromDatePickerLabel.text
+            
+            //trainSheduleVC.departureStationOnTrainSheduleViewController.text = departureStation.text
+        }
+    }
 }
-
-
 
 extension TrainSearchController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
