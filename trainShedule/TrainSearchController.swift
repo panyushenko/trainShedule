@@ -50,8 +50,6 @@ class TrainSearchController: UIViewController {
     @objc
     func updateDatePickerLabel() {
         dateFromDatePickerLabel.text = dateFormatter.string(from: datePickerForTrainTimetable.date)
-//        let onlyDate = "\(datePickerForTrainTimetable.date)".components(separatedBy: " ")[0]
-//        print(onlyDate)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier! == "SearchTrain" {
@@ -59,8 +57,6 @@ class TrainSearchController: UIViewController {
             trainSheduleVC.departureStationNameOnTrainSheduleViewController = departureStation.text
             trainSheduleVC.destinationStationNameOnTrainSheduleViewController = destinationStation.text
             trainSheduleVC.dateNameOnTrainSheduleViewController = dateFromDatePickerLabel.text
-            
-            //trainSheduleVC.departureStationOnTrainSheduleViewController.text = departureStation.text
         }
     }
 }

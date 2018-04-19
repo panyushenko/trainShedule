@@ -1,15 +1,18 @@
 PODS:
+  - Alamofire (4.6.0)
   - SwiftLint (0.25.0)
   - SWXMLHash (4.0.0)
 
 DEPENDENCIES:
+  - Alamofire
   - SwiftLint
   - SWXMLHash (~> 4.0.0)
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
   SWXMLHash: 6bbc0bf72975a18ceda469fb7d6a886a26d81694
 
-PODFILE CHECKSUM: ea9efb90cd681559465551815c39e9682a35bdca
+PODFILE CHECKSUM: 6bf97266d2658b14a31bef03a9bf625cbe112ce0
 
 COCOAPODS: 1.4.0

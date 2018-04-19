@@ -8,4 +8,5 @@ target 'trainShedule' do
   # Pods for trainShedule
 pod 'SWXMLHash', '~> 4.0.0'
 pod 'SwiftLint'
+pod 'Alamofire'
 end
